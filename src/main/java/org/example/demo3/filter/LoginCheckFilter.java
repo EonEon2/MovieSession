@@ -10,8 +10,10 @@ import lombok.extern.log4j.Log4j2;
 
 import java.io.IOException;
 
-@WebFilter(value = {"/movies","/buy","/mypage"}) //가장 기초적으로 들고있어야할, userInfo값은 매 브라우저마다 검사할거야.
+@WebFilter(urlPatterns = {"/movies","/buy","/mypage"}) //가장 기초적으로 들고있어야할, userInfo값은 매 브라우저마다 검사할거야.
+// value 라고 해도 상관없음.
 @Log4j2
+
 public class LoginCheckFilter implements Filter {
 
     @Override
